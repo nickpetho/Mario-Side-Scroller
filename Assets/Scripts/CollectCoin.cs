@@ -28,7 +28,7 @@ public class CollectCoin : MonoBehaviour
             GameObject.Destroy(g);
 
             //Decrements the coin counter
-
+            
         }
     }
 }

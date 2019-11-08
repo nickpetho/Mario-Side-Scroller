@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinData : MonoBehaviour
+[CreateAssetMenu(menuName ="CoinCounter")]
+public class CoinData : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public int count = 20;
+
+    public void decrementCount()
     {
-        
+        count--;
     }
 
-    // Update is called once per frame
-    void Update()
+    public int getCount()
     {
-        
+        return count;
     }
 }
