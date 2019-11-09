@@ -5,15 +5,24 @@ using UnityEngine;
 [CreateAssetMenu(menuName ="CoinCounter")]
 public class CoinData : ScriptableObject
 {
-    public int count = 20;
+    //set coin amount to 20
+    int coinCount = 20;
 
+    //Decrement the coin count by 1
     public void decrementCount()
     {
-        count--;
+        coinCount--;
     }
 
-    public int getCount()
+    //Gets the current coin count
+    public int GetCount()
     {
-        return count;
+        return coinCount;
+    }
+
+    //Resets the coin count to 20 each start
+    public void ResetCount()
+    {
+        coinCount = 20;
     }
 }

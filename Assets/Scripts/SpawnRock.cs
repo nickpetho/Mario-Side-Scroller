@@ -13,14 +13,12 @@ public class SpawnRock : MonoBehaviour
     void Start()
     {
         //Calls the function to spawn the rocks at the start
-        //Spawns rocks at random x locations
         for (int i = 0; i < 10; i++)
         {
             SpawnRocks();
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
 

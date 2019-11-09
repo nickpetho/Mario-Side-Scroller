@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float speed = 2.5f;
-    public float jumpSpeed = 2.0f;
+    public float jumpSpeed = 3.3f;
     private float xRange = 6.5f;
     private bool MovingLeft = false;
     private bool MovingRight = false;
@@ -20,9 +20,9 @@ public class PlayerMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //Set the animation parameters
         animator.SetBool("MovingRight", MovingRight);
         animator.SetBool("MovingLeft", MovingLeft);
 
@@ -52,6 +52,7 @@ public class PlayerMove : MonoBehaviour
             onGround = false;
         }
 
+        //If the player reaches the end of the map, wrap around to the other side
         if (transform.position.x > xRange)
         {
             rb.position = new Vector2(-xRange,-3);

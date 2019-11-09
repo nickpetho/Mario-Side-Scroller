@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 42123396}
   - component: {fileID: 42123398}
   - component: {fileID: 42123397}
+  - component: {fileID: 42123399}
   m_Layer: 5
   m_Name: CoinText
   m_TagString: Untagged
@@ -154,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 387, y: 187.2}
-  m_SizeDelta: {x: 193.7, y: 45}
+  m_AnchoredPosition: {x: 415.4, y: 187.2}
+  m_SizeDelta: {x: 250.6, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &42123397
 MonoBehaviour:
@@ -197,6 +198,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42123395}
   m_CullTransparentMesh: 0
+--- !u!114 &42123399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 42123395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac232081c9a86e44bb56d8bcf91fad42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  c: {fileID: 11400000, guid: fb78b1dcc07259f468cdce781166c4c4, type: 2}
+  coinText: {fileID: 42123397}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
-  jumpSpeed: 3
+  jumpSpeed: 3.3
   animator: {fileID: 1126607802}
 --- !u!114 &1126607804
 MonoBehaviour:
@@ -519,6 +534,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cb2e469179adb4d93a73242e41223e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  c: {fileID: 11400000, guid: fb78b1dcc07259f468cdce781166c4c4, type: 2}
 --- !u!114 &1126607805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -533,6 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 5120753393009774547, guid: 4d7eff7b05e092e42adbcd3e42293c97,
     type: 3}
+  l: {fileID: 11400000, guid: 98fa8cad988db0740885a79a568a523f, type: 2}
 --- !u!1 &1261182307
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,6 +662,8 @@ GameObject:
   - component: {fileID: 1317370566}
   - component: {fileID: 1317370568}
   - component: {fileID: 1317370567}
+  - component: {fileID: 1317370569}
+  - component: {fileID: 1317370570}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -707,6 +726,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1317370565}
   m_CullTransparentMesh: 0
+--- !u!114 &1317370569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317370565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fbc73b5a60b0e42b57ca7efd60e9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  l: {fileID: 11400000, guid: 98fa8cad988db0740885a79a568a523f, type: 2}
+  lifeImage: {fileID: 1317370567}
+--- !u!114 &1317370570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317370565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa053b58567b3b4db303170cd9026e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  l: {fileID: 11400000, guid: 98fa8cad988db0740885a79a568a523f, type: 2}
 --- !u!1 &1483493055
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,6 +968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinPrefab: {fileID: 8556563163985958584, guid: 1f00f81401e1b894d891ec5061e6eb51,
     type: 3}
+  c: {fileID: 0}
   x: 0
 --- !u!4 &1682891320
 Transform:

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawnCoin : MonoBehaviour
 {
     public GameObject coinPrefab;
+    public CoinData c;
     public float x;
     private float y = -2.5f;
     private Vector3 coinPosition;
@@ -13,14 +14,12 @@ public class SpawnCoin : MonoBehaviour
     void Start()
     {
         //Calls the function to spawn the coins at the start
-        //Spawns coins at random x locations
         for (int i = 0; i < 20; i++)
         {
             SpawnCoins();
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         

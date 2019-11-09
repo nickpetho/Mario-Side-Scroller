@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class CollectCoin : MonoBehaviour
 {
-    Rigidbody2D rb;
-
+    public CoinData c;
+    
     // Start is called before the first frame update
     void Start()
     {
-        // Get the Rigidbody component of this object
-        rb = GetComponent<Rigidbody2D>();
+        //Calls the reset coin function
+        c.ResetCount();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -27,8 +26,8 @@ public class CollectCoin : MonoBehaviour
             //Destroys the coin object
             GameObject.Destroy(g);
 
-            //Decrements the coin counter
-            
+            //Calls the decrement coin function
+            c.decrementCount();
         }
     }
 }

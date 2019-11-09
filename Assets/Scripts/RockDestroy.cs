@@ -5,14 +5,15 @@ using UnityEngine;
 public class RockDestroy : MonoBehaviour
 {
     public GameObject explosionPrefab;
+    public LivesData l;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Calls the function to reset the lives
+        l.ResetLives();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -33,7 +34,7 @@ public class RockDestroy : MonoBehaviour
             GameObject.Destroy(exp, 2);
 
             //Decrements the Lives counter
-
+            l.decrementLives();
         }
     }
 }
